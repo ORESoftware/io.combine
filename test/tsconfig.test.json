@@ -1,9 +1,7 @@
 {
   "compileOnSave": false,
-  "allowJs": false,
   "compilerOptions": {
     "declaration": false,
-    "allowJs": false,
     "pretty": true,
     "skipLibCheck": true,
     "baseUrl": ".",

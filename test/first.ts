@@ -8,5 +8,11 @@ import * as assert from 'assert';
 import * as EE from 'events';
 import * as strm from "stream";
 
+import {Combiner} from "../dist";
 
-console.log('your simple typescript test goes here.');
+const combiner = new Combiner(process.stdout);
+
+const k = cp.spawn('bash');
+
+k.stdin.end(`echo "foo"`);
+combiner.combine([k.stdout], {prefix: 'south: '});
